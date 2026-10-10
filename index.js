@@ -7,10 +7,12 @@ const port=8080;
 //using ejs
 app.set("view engine","ejs");
 app.set("views",path.join(__dirname,"/views"));
+// Serve static assets from the public folder
+app.use(express.static(path.join(__dirname, 'public')));
 
-app.get("/",(req,res)=>{
-    res.render("home.ejs");
-});
+// app.get("/",(req,res)=>{
+//     res.render("home.ejs");
+// });
 
 //the code if logic is writtejn in the rolldice.ejs
 // app.get("/rolldice",(req,res)=>{

@@ -3,18 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>instagram basic ejs code</title>
+    <title>Instagram Glassmorphism Theme</title>
+    <link rel="stylesheet" href="/css/insta.css">
 </head>
 <body>
-    <h2>This page belongs to: @<%= username %></h2>
-    <button>Follow</button>
-    <button>Message</button>
-
-    <h3>Accounts that Follow you:</h3>
-    <ul>
-        <% for(let name of followers){ %>
-            <li><%= name %></li>
-        <% } %>
-    </ul>
+    <div class="profile-card">
+        <h2>This page belongs to: @<%= username %></h2>
+        <div class="btn-group">
+            <button class="btn-follow">Follow</button>
+            <button class="btn-message">Message</button>
+        </div>
+        <h3>Accounts that Follow you:</h3>
+        <ul>
+            <% for(let name of followers){ %>
+                <li><%= name %></li>
+            <% } %>
+        </ul>
+    </div>
 </body>
 </html>
